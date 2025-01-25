@@ -11,6 +11,9 @@
     },
     {
       "path": "./libs/event-store"
+    },
+    {
+      "path": "./libs/segment-tree"
     }
   ]
 }

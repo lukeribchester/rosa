@@ -1,0 +1,24 @@
+{
+  "name": "segment-tree",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/segment-tree/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "options": {
+        "outputPath": "dist/libs/segment-tree",
+        "tsConfig": "libs/segment-tree/tsconfig.lib.json",
+        "packageJson": "libs/segment-tree/package.json",
+        "main": "libs/segment-tree/src/index.ts",
+        "assets": [
+          "libs/segment-tree/*.md"
+        ]
+      }
+    }
+  }
+}
