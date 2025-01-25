@@ -1,0 +1,52 @@
+{
+  "name": "@rosa/rosa",
+  "version": "0.0.1",
+  "private": true,
+  "nx": {
+    "name": "rosa",
+    "projectType": "application",
+    "sourceRoot": "apps/rosa/src",
+    "targets": {
+      "build": {
+        "executor": "nx:run-commands",
+        "options": {
+          "command": "webpack-cli build",
+          "args": [
+            "node-env=production"
+          ]
+        },
+        "configurations": {
+          "development": {
+            "args": [
+              "node-env=development"
+            ]
+          }
+        }
+      },
+      "serve": {
+        "executor": "@nx/js:node",
+        "defaultConfiguration": "development",
+        "dependsOn": [
+          "build"
+        ],
+        "options": {
+          "buildTarget": "rosa:build",
+          "runBuildTargetDependencies": false
+        },
+        "configurations": {
+          "development": {
+            "buildTarget": "rosa:build:development"
+          },
+          "production": {
+            "buildTarget": "rosa:build:production"
+          }
+        }
+      },
+      "test": {
+        "options": {
+          "passWithNoTests": true
+        }
+      }
+    }
+  }
+}

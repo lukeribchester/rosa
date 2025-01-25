@@ -1,0 +1,27 @@
+{
+  "name": "@rosa/rosa-e2e",
+  "version": "0.0.1",
+  "private": true,
+  "nx": {
+    "name": "rosa-e2e",
+    "projectType": "application",
+    "implicitDependencies": [
+      "rosa"
+    ],
+    "targets": {
+      "e2e": {
+        "executor": "@nx/jest:jest",
+        "outputs": [
+          "{workspaceRoot}/coverage/{e2eProjectRoot}"
+        ],
+        "options": {
+          "jestConfig": "apps/rosa-e2e/jest.config.ts",
+          "passWithNoTests": true
+        },
+        "dependsOn": [
+          "rosa:build"
+        ]
+      }
+    }
+  }
+}
