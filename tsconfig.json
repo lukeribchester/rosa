@@ -8,6 +8,9 @@
     },
     {
       "path": "./apps/rosa"
+    },
+    {
+      "path": "./libs/event-store"
     }
   ]
 }

@@ -1,0 +1,24 @@
+{
+  "name": "event-store",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/event-store/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "options": {
+        "outputPath": "dist/libs/event-store",
+        "tsConfig": "libs/event-store/tsconfig.lib.json",
+        "packageJson": "libs/event-store/package.json",
+        "main": "libs/event-store/src/index.ts",
+        "assets": [
+          "libs/event-store/*.md"
+        ]
+      }
+    }
+  }
+}
