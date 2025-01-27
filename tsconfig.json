@@ -10,10 +10,10 @@
       "path": "./apps/rosa"
     },
     {
-      "path": "./libs/event-store"
+      "path": "./libs/segment-tree"
     },
     {
-      "path": "./libs/segment-tree"
+      "path": "./libs/event-store"
     }
   ]
 }

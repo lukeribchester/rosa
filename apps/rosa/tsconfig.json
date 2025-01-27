@@ -4,6 +4,9 @@
   "include": [],
   "references": [
     {
+      "path": "../../libs/event-store"
+    },
+    {
       "path": "./tsconfig.app.json"
     },
     {
