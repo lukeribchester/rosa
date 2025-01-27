@@ -1,20 +1,8 @@
 export interface Event {
-  id: string;
-  type: string;
-}
-
-export interface AvailabilityUpdated extends Event {
-  type: 'AVAILABILITY_UPDATED';
+  id: number;
+  type: 'AVAILABILITY_UPDATED' | 'APPOINTMENT_CREATED';
   payload: {
-    from: Date;
-    to: Date;
-  };
-}
-
-export interface AppointmentCreated extends Event {
-  type: 'APPOINTMENT_CREATED';
-  payload: {
-    from: Date;
-    to: Date;
+    from: number;
+    to: number;
   };
 }
