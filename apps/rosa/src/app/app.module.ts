@@ -6,6 +6,6 @@ import { EventStoreModule } from '@rosa/event-store';
 @Module({
   imports: [EventStoreModule],
   controllers: [AvailabilityController],
-  providers: [AvailabilityService],
+  providers: [AvailabilityService, EventStoreService],
 })
 export class AppModule {}
